@@ -1,8 +1,8 @@
 const Product = ({ idGenerator }) => {
-    return ({ id, name, description, price, quantity }) => {
+    return ({ id, name, description, price, quantity }={}) => {
         if (!id)
             id = idGenerator.generateId();
-        Object.freeze({
+       return Object.freeze({
             create: () => { },
             delete: () => { },
             getById: () => { },
