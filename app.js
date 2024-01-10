@@ -6,6 +6,10 @@ const db = new sqlite3.Database('post-db');
 const app =express();
 app.use(bodyParser);
 
+app.post("/products",(req,res)=>{
+
+});
+
 const port=process.env.Port || 3000;
 app.listen(port,()=>{
     console.log('Listening on port'+port);
