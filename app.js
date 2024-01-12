@@ -8,6 +8,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.post("/products",  httpRequestAdaptor(productController.create));
+app.get("/products",  httpRequestAdaptor(productController.list));
 
 const port = process.env.Port || 3000;
 app.listen(port, () => {
